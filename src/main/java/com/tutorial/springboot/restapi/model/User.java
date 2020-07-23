@@ -3,7 +3,6 @@ package com.tutorial.springboot.restapi.model;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -37,8 +36,8 @@ public class User {
     @CreatedBy
     private String createdBy;
 
-    @UpdateTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
+    //@UpdateTimestamp
+    //@Temporal(TemporalType.TIMESTAMP)
     @Column(name = "updated_at", nullable = false)
     private Date updatedAt;
 
@@ -121,6 +120,6 @@ public class User {
                 ", createdBy='" + createdBy + '\'' +
                 ", updatedAt='" + updatedAt + '\'' +
                 ", updatedBy='" + updatedBy + '\'' +
-                "}";
+                '}';
     }
 }
